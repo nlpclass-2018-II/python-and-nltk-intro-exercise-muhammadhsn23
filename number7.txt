@@ -1,0 +1,18 @@
+Stemming is like chopping a mushroom's stem from its cap, so that we could eat the edible part
+In NLP, stemming is cutting the inflections(imbuhan) and keep the main essence of the word
+
+Lemmatization also tries to remove inflections  carefully, unlike stemming, lemmatization
+doest not simply chop off inflections but relies lexical knowledge base.
+
+Is it possible to perfrom stemming using NLTK? Yes.
+
+from nltk.stem import PorterStemmer
+from nltk.tokenize import sent_tokenize, word_tokenize
+ 
+words = ["game","gaming","gamed","games"]
+ps = PorterStemmer()
+ 
+for word in words:
+    print(ps.stem(word)) 
+
+
